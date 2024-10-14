@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact &mdash; form</title>
+  </head>
+  <body class="bg-lightblue">
+    <!-- Contact Form -->
+    <form
+      class="max-w-2xl m-4 p-4 md:mx-auto md:my-20 rounded-lg md:p-7 bg-white grid grid-cols-1 gap-7 relative"
+    >
+      <!--  -->
+
+      <!-- Sucess message -->
+      <!-- <div
+        class="bg-darkgreen max-w-3/4 p-5 rounded-xl sucess-msg absolute translate-x-1/4"
+      >
+        <div class="flex items-center font-semibold gap-3 mb-2">
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          <h1 class="text-white text-opacity-90">Message sent!</h1>
+        </div>
+        <p class="text-white text-opacity-80">
+          Thanks for completing the form we'll be in touch soon
+        </p>
+        <p class="firstname-success-msg text-white"></p>
+        <p class="lastname-success-msg text-white"></p>
+        <p class="email-success-msg text-white"></p>
+        <p class="message-success-msg text-white"></p>
+      </div> -->
+      <!-- heading -->
+      <h1 class="text-darkgrey font-semibold text-2xl">Contact Us</h1>
+      <!-- Name  -->
+      <div class="flex gap-4 flex-col md:flex-row">
+        <!-- First name -->
+        <div>
+          <label class="text-darkgrey">First name <span>*</span></label>
+          <input
+            type="text"
+            name="full-name"
+            class="text-darkgrey border w-full md:w-[300px] my-2 outline-1 outline-greenish h-10 px-4 rounded-lg first-name"
+          />
+          <!-- Error message -->
+          <p class="text-errormsg hidden firstname-error-msg" id="error-msg">
+            This feild is required
+          </p>
+        </div>
+        <!-- Last name -->
+        <div>
+          <label class="text-darkgrey">Last name <span>*</span></label>
+          <input
+            type="text"
+            name="last-name"
+            class="text-darkgrey border w-full md:w-[300px] my-2 outline-1 outline-greenish h-10 px-4 rounded-lg last-name"
+          />
+          <!-- Error message -->
+          <p class="text-errormsg hidden lastname-error-msg" id="error-msg">
+            This feild is required
+          </p>
+        </div>
+      </div>
+      <!-- Email address -->
+      <label class="text-darkgrey">Email address<span>*</span></label>
+      <input
+        type="email"
+        name="email"
+        class="text-darkgrey border outline-1 outline-greenish h-10 px-4 rounded-lg -mt-4 email-address"
+      />
+      <!-- Error message -->
+      <p class="text-errormsg -mt-4 email-error-msg hidden" id="error-msg">
+        Please enter a valid email address
+      </p>
+      <!-- Radio buttons -->
+      <div class="flex flex-col gap-2">
+        <label for="query-type">Query type <span>*</span></label>
+        <!-- buttons -->
+        <div class="flex gap-4 flex-col md:flex-row">
+          <!-- Button 1 -->
+          <label
+            for="radio-btn-1"
+            class="flex items-center gap-2 border border-greenish h-10 justify-center text-lg text-darkgrey w-full md:w-[300px] rounded-lg"
+          >
+            <input
+              type="radio"
+              name="query"
+              id="radio-btn-1"
+              class="radio-btn radio-1"
+            />
+            General Enquiry
+          </label>
+          <!-- Button 2 -->
+          <label
+            for="radio-btn-2"
+            class="flex items-center gap-2 border border-greenish h-10 justify-center text-lg text-darkgrey w-full md:w-[300px] rounded-lg"
+          >
+            <input
+              type="radio"
+              name="query"
+              id="radio-btn-2"
+              class="radio-btn radio-2"
+            />
+            Support Request
+          </label>
+        </div>
+      </div>
+      <!-- Error message -->
+      <p class="text-errormsg -mt-4 hidden radio-error-msg" id="error-msg">
+        Please select a query type
+      </p>
+      <!-- Message  -->
+      <label class="text-darkgrey">Message <span>*</span></label>
+      <textarea
+        type="text"
+        class="border px-4 py-2 outline-1 outline-greenish text-darkgrey -mt-4 rounded-lg message"
+        name="Message"
+        rows="4"
+      ></textarea>
+      <!-- Error message -->
+      <p class="text-errormsg -mt-4 hidden message-error-msg" id="error-msg">
+        This feild is required
+      </p>
+      <!-- Check box -->
+      <label for="checkbox" class="flex items-center gap-4 text-darkgrey">
+        <input
+          type="checkbox"
+          name="checkbox"
+          id="checkbox"
+          class="accent-greenish h-4 w-4 check-box"
+        />
+        I consent to being contacted by team *
+      </label>
+      <!-- Error message -->
+      <p class="text-errormsg -mt-4 hidden check-error-msg" id="error-msg">
+        To submit this form, please consent to being contacted
+      </p>
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="bg-green-900 bg-opacity-90 hover:bg-opacity-100 transition-all duration-500 ease-in-out py-3 text-lg font-semibold text-white rounded-lg tracking-wide submit--btn"
+        id="submit-btn"
+      >
+        submit
+      </button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
